@@ -1,0 +1,30 @@
+cmake_minimum_required(VERSION 3.15)
+project(CourseWork)
+
+set(CMAKE_CXX_STANDARD 17)
+
+
+include_directories(C:/MinGW/include)
+
+
+link_directories(C:/MinGW/lib)
+
+
+add_executable(CourseWork
+        src/Board.cpp
+        src/Disk.cpp
+        src/main.cpp
+        src/Scene.cpp
+        src/Shape.cpp
+        src/Stick.cpp
+        src/utils.cpp
+        inc/Stick.h
+        inc/utils.h
+        inc/Shape.h
+        inc/Scene.h
+        inc/Disk.h
+        inc/Board.h)
+
+
+target_link_libraries(CourseWork -lopengl32 -lfreeglut -lglu32)
+
